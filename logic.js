@@ -183,7 +183,7 @@ function NextIteration(estAct,actChar){
         return(estAct);
     }
     else{
-        alert("La cadena no cumple con las reglas");
+        alert("No existe un camino valido");
         return null;
     }
 }
@@ -215,7 +215,11 @@ function recorreAutomata(){
             return null;
         }
         estAct = NextIteration(estAct,actChar);
-        ruta.push(estAct.nom);
+        if(estAct)
+            ruta.push(estAct.nom);
+        else{
+            break;
+        }
         cont++;
     }
     
