@@ -231,16 +231,19 @@ function recorreAutomata(){
     }
 
     initOp = true;
-
-    if(estAct.nom == estadoFinal && cont == strEval.length){
-        $("#strRes").text(resp);
-        alert("La cadena cumple con el resultado");
+    if(estAct){
+        if(estAct.nom == estadoFinal && cont == strEval.length){
+            $("#strRes").text(resp);
+            alert("La cadena cumple con el resultado");
+        }
+        else{
+            $("#strRes").text(resp);
+            alert("La cadena no cumple con las reglas");
+        }
     }
     else{
         $("#strRes").text(resp);
-        alert("La cadena no cumple con las reglas");
     }
-
     
 
 }
