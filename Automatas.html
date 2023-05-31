@@ -1,0 +1,62 @@
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="./logic.js"></script>
+        <title>Automata</title>
+    </head>
+
+    <body>
+        <div>
+            <h2 class="Titulo">Alfabeto</h2>
+            <div class="Alfabeto" id="ShowAlfabeth">
+
+            </div>
+            <div class="Alphabet">
+                <h3 id="alphabetSymbols"><b>Σ = {}</b></h3>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                    <input type="text" id="NewSymbol" class="form-control input_symbol" maxlength="1">
+                    <button class="form-control input_button" onclick="AddSymbol()">Agrega simbolo</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="ol-md-2 col-md-offset-4">
+                    <h3>Estado final <select onchange="cambiaEstado()" class="form-control input_symbol" id="fEstadoFinal"></select></h3>
+                </div>
+            </div>
+        </div>
+        <div class="table_cont">
+            <h2 class="Titulo">Automata</h2>
+            <table id="aut_table" class="table table_aut table-striped">
+                <tbody>
+                    <tr>
+                        <th scope="col">Estado</th>
+                    </tr>
+                </tbody>
+            </table>
+            <button onclick="AddState()" class="btn btn-primary btn_new">Agregar estado</button>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h3>Evaluacion</h3>
+                <h3 id = "strRes"></h3>
+                <input id="str_eval" type="text" class="form-control">
+                <div class="formbutton">
+                    <button onclick="recorreAutomata()" class="form-control btn-evalua">Ciclo completo</button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h3>Hernandez Balderas Eduardo</h3>
+        </div>
+    </body>
+    
+
+</html>

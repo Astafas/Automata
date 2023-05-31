@@ -1,0 +1,47 @@
+.table_cont{
+    width: 100%;
+    align-items: center;
+}
+.table_aut{
+    width: 60%;
+    margin: 0 20% 0 20%;
+}
+.input_symbol{
+    width: 120px;
+    display: inline;
+}
+.input_button{
+    width: 200px;
+    display: inline;
+}
+.Alphabet{
+
+    width: 70%;
+    margin: 3% 15% 3% 15%;
+    text-align: center;
+    padding: 10px;
+    border: solid #A4A4A4 2px;
+    border-radius: 5px;
+
+}
+#alphabetSymbols{
+    margin: 0px;
+    font-weight: bold;
+}
+.btn_new{
+    margin: 1% 0 0 20%;
+}
+.Titulo{
+    padding: 0 0 2% 7%;
+}
+.select-tran{
+    width: 70px;
+}
+.btn-evalua{
+    margin: 15px 0 20px 0;
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
