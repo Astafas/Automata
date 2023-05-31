@@ -204,6 +204,7 @@ function recorreAutomata(){
     var resp = null;
     var cont = 0;
     ruta = [];
+    ruta.push(estAct.nom);
     var ruta_res = estAct.nom + "->";
     $("#strRes").text("");
 
