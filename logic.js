@@ -230,8 +230,12 @@ function recorreAutomata(){
         console.log(ruta[i] + " " + estadoFinal);
         if(i==ruta.length-1 && ruta[i] == estadoFinal)
             resp += "{" + ruta[i] + "}";
-        else
-            resp += ruta[i] + "(" + simbolo[i] + ")";
+        else{
+            resp += ruta[i];
+            if(simbolo[i]){
+                resp += "(" + simbolo[i] + ")";
+            }
+        }
         if(i<ruta.length-1)
             resp += "->";
     }
