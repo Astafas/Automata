@@ -204,6 +204,7 @@ function recorreAutomata(){
     var resp = null;
     var cont = 0;
     ruta = [];
+    var simbolo = [];
     ruta.push(estAct.nom);
     var ruta_res = estAct.nom + "->";
     $("#strRes").text("");
@@ -215,6 +216,7 @@ function recorreAutomata(){
             return null;
         }
         estAct = NextIteration(estAct,actChar);
+        simbolo.push(actChar);
         if(estAct)
             ruta.push(estAct.nom);
         else{
@@ -225,7 +227,10 @@ function recorreAutomata(){
     
     var resp = "";
     for(i=0;i<ruta.length;i++){
-        resp += ruta[i];
+        if(i==ruta.length-1)
+            resp += "{" + ruta[i] + "}" + "(" + simbolo[i] + ")";
+        else
+            resp += ruta[i] + "(" + simbolo[i] + ")";
         if(i<ruta.length-1)
             resp += "->";
     }
