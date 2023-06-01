@@ -228,7 +228,7 @@ function recorreAutomata(){
     var resp = "";
     for(i=0;i<ruta.length;i++){
         if(i==ruta.length-1)
-            resp += "{" + ruta[i] + "}" + "(" + simbolo[i] + ")";
+            resp += "{" + ruta[i] + "}";
         else
             resp += ruta[i] + "(" + simbolo[i] + ")";
         if(i<ruta.length-1)
